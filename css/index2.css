@@ -1,0 +1,358 @@
+.view_btn {
+  position: fixed;
+  width: 100px;
+  height: 100px;
+  background-color: #fff;
+  border-radius: 50%;
+  outline: none;
+  z-index: 1;
+  left: 5.20833333%;
+}
+button,
+li,
+ul,
+p,
+h1,
+h2,
+h3,
+h4,
+h5 {
+  padding: 0;
+  margin: 0;
+}
+a:link,
+a:visited,
+a:hover,
+a:active {
+  text-decoration: none;
+}
+html,
+body,
+img,
+#viewDiv {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  width: 100%;
+}
+body {
+  position: relative;
+}
+li {
+  list-style: none;
+}
+#mask {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.1);
+  z-index: 9999;
+}
+#log {
+  position: fixed;
+  right: 9.375%;
+  top: 1.953125%;
+  z-index: 1;
+}
+#del {
+  position: fixed;
+  right: 6.25%;
+  top: 1.953125%;
+  z-index: 1;
+}
+#delAll {
+  position: fixed;
+  right: 2.08333333%;
+  top: 1.953125%;
+  z-index: 1;
+}
+#popup {
+  background: url('../popup_image/bg.png') no-repeat;
+  background-size: 100% 100%;
+  width: 100%;
+  height: 512px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 10;
+  transform: scale(1);
+  transition: all .5s;
+  overflow: hidden;
+}
+#popup > .container {
+  position: relative;
+  top: 11.9140625%;
+  left: 5.3125%;
+  width: 89.32291667%;
+  height: 72.0703125%;
+}
+#popup > .container > .popup_title {
+  position: absolute;
+  width: 100%;
+  top: 0.390625%;
+  left: 12.41982507%;
+}
+#popup > .container > .popup_title > li {
+  display: table-cell;
+  vertical-align: middle;
+  background: url('../popup_image/subtitle.png') no-repeat;
+  background-size: 100%;
+  width: 7.2303207%;
+  height: 8.67208672%;
+  float: left;
+  font-size: 0.8rem;
+  color: #fff;
+  text-align: center;
+  line-height: 1.6rem;
+}
+#popup > .container > .popup_title > .center {
+  margin: 0 26.53061224%;
+}
+#popup > .container > .content {
+  position: relative;
+  width: 100%;
+  height: 89.43089431%;
+  top: 10.56910569%;
+}
+#popup > .container > .content > div {
+  float: left;
+}
+#popup > .container > .content > .table {
+  height: 100%;
+  width: 11.25364431%;
+  margin-right: 0.34985423%;
+  text-align: center;
+}
+#popup > .container > .content > .table > ul {
+  height: 100%;
+  float: left;
+  width: 32%;
+  font-size: 0.6rem;
+  color: #fff;
+}
+#popup > .container > .content > .table > ul > li {
+  height: 10%;
+  line-height: 1.65rem;
+}
+#popup > .container > .content > .table > ul > li:nth-child(2n) {
+  background-color: #2F509D;
+}
+#popup > .container > .content > .table > ul > li:nth-child(2n+1) {
+  background-color: #274488;
+}
+#popup > .container > .content > .table > ul:nth-child(2) {
+  margin: 0 2%;
+}
+#popup > .container > .content > .similar {
+  height: 100%;
+  width: 20.81632653%;
+}
+#popup > .container > .content > .similar > div {
+  background-color: #274488;
+}
+#popup > .container > .content > .similar > .s_top {
+  height: 20%;
+}
+#popup > .container > .content > .similar > .s_mid {
+  height: 28%;
+  margin: 2% 0;
+}
+#popup > .container > .content > .similar .s_bot {
+  height: 48%;
+}
+#popup > .container > .content > .current {
+  width: 33.81924198%;
+  height: 100%;
+  text-align: center;
+  margin: 0 0.69970845%;
+}
+#popup > .container > .content > .current > div {
+  background-color: #274488;
+}
+#popup > .container > .content > .current > .c_top {
+  height: 44.54545455%;
+}
+#popup > .container > .content > .current > .c_mid {
+  height: 7.87878788%;
+  margin: 1.20689655% 0;
+  font-size: 0.6rem;
+  line-height: 1.2rem;
+  color: #f78b26;
+}
+#popup > .container > .content > .current > .c_bot {
+  height: 43.33333333%;
+}
+#popup > .container > .content > .blank {
+  height: 100%;
+  width: 32.36151603%;
+}
+#popup > .container > .content > .blank > .b_top {
+  position: relative;
+  background-color: #274488;
+  width: 100%;
+  height: 30%;
+  margin-bottom: 1.26126126%;
+  text-align: center;
+  overflow: hidden;
+}
+#popup > .container > .content > .blank > .b_top > .btn {
+  position: absolute;
+  width: 100%;
+  bottom: 2%;
+}
+#popup > .container > .content > .blank > .b_top > .btn > a {
+  width: 22.34234234%;
+  height: 100%;
+  display: inline-block;
+}
+#popup > .container > .content > .blank > .b_top > .btn > a > img {
+  width: 100%;
+  height: 100%;
+}
+#popup > .container > .content > .blank > .b_bot {
+  margin: 1.26126126% 0;
+  height: 67.87878788%;
+}
+#popup > .container > .content > .blank > .b_bot > div {
+  background-color: #274488;
+  float: left;
+}
+#popup > .container > .content > .blank > .b_bot > .b_bot_left {
+  margin-right: 2%;
+  width: 28%;
+  height: 100%;
+}
+#popup > .container > .content > .blank > .b_bot > .b_bot_right {
+  width: 70%;
+  height: 100%;
+}
+#popup_close {
+  width: 1.57434402%;
+  height: 7.31707317%;
+  position: absolute;
+  z-index: 10;
+  background-color: white;
+  right: 1.04956268%;
+  top: 0.81300813%;
+  text-align: center;
+  cursor: default;
+  background-color: transparent;
+}
+#popup_close > img {
+  width: 100%;
+  height: 100%;
+}
+body > button {
+  font-size: 0.8rem;
+}
+#btn_select_open {
+  background: url('../images/monitor-start.png') no-repeat;
+  background-size: 100% 100%;
+  bottom: 13.671875%;
+}
+#select {
+  background: url('../popup_image/select-bg.png') no-repeat;
+  background-size: 100% 100%;
+  width: 780px;
+  height: 468px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 10;
+  transform: translate(-50%, -50%) scale(0);
+  transition: all .5s;
+  overflow: hidden;
+}
+#select > .container {
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+}
+#select > .container > .select_title {
+  height: 14.6%;
+  line-height: 3.4155rem;
+  padding-left: 10%;
+  color: #fff;
+  font-weight: normal;
+  font-size: 24px;
+}
+#select > .container > ul {
+  float: left;
+  height: 85.4%;
+  width: 15.51282051%;
+  text-align: center;
+  color: #fff;
+}
+#select > .container > ul > li {
+  line-height: 4.072rem;
+  height: 20%;
+}
+#select > .container > #select_option {
+  color: #fff;
+  float: left;
+  width: 84.48717949%;
+  height: 85.4%;
+}
+#select > .container > #select_option > ul {
+  text-align: center;
+  height: 20%;
+  font-size: 0.65rem;
+}
+#select > .container > #select_option > ul > li {
+  height: 100%;
+  width: 25%;
+  line-height: 3.8rem;
+  float: left;
+}
+#select > .container > #select_option > ul > li > a {
+  background: url("../popup_image/Unselected.png") no-repeat;
+  background-size: 100% 100%;
+  line-height: 2.2rem;
+  vertical-align: middle;
+  color: #fff;
+  width: 80%;
+  height: 55%;
+  display: inline-block;
+}
+#select > .container > #select_option > ul > li > a > i {
+  background-size: 100% 100%;
+  vertical-align: middle;
+  width: 24.27921093%;
+  height: 72.59073842%;
+  display: inline-block;
+  text-indent: -9999px;
+  margin-right: 3%;
+}
+#select > .container > #select_option > ul > li > a.on {
+  background: url("../popup_image/selected.png") no-repeat;
+  background-size: 100% 100%;
+}
+#select > .container > .btn {
+  position: absolute;
+  top: 5%;
+  right: 2%;
+  width: 25%;
+  height: 10%;
+  text-align: center;
+  font-size: 0;
+}
+#select > .container > .btn > button {
+  font-size: 0.8rem;
+  color: #fff;
+  outline: 0;
+  border: 0;
+  width: 40%;
+  height: 60%;
+  margin-right: 4%;
+  line-height: 1.404rem;
+}
+#submit {
+  background: url('../popup_image/submit.png') no-repeat;
+  background-size: 100% 100%;
+}
+#cancel {
+  background: url('../popup_image/cancel.png') no-repeat;
+  background-size: 100% 100%;
+}

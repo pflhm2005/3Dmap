@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <!--<script src="./js/vue.min.js"></script>-->
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="https://js.arcgis.com/4.3/esri/css/main.css">
+    <script src="https://js.arcgis.com/4.3/"></script>
+    <title>3Dmap</title>
+    <script src='./js/index.js'></script>
+    <link rel="stylesheet" href="./css/index2.css">
+</head>
+<style>
+
+</style>
+
+<body>
+    <!--<div id="mask"></div>-->
+    <!--<button id="log">打印点</button>-->
+    <!--<button id="del">删除</button>-->
+    <!--<button id="delAll">全部删除</button>-->
+    <!--<button id="clear_map" class='view_btn'>clear</button>-->
+    <!--<button id="btn_select_close" class='view_btn'>close</button>-->
+    <div id="popup_container">
+        <button id="btn_select_open" class='view_btn' @click='showSelect'>open</button>
+        <div id="select">
+            <div class="container">
+                <h5 class="select_title">地图资源导航</h5>
+                <ul class="select_type">
+                    <li v-for="item in type">{{item}}</li>
+                </ul>
+                <div id='select_option'>
+                    <template v-for="(items,index) in options">
+                    <ul>
+                        <template v-for='(item,index) in items.option'>
+                            <li>
+                                <a href="javascript:void(0);" class='on'>
+                                    <i :style='{backgroundImage:item.style}' v-if='item.type'>{{item.type}}</i>{{item.name}}
+                                </a>
+                            </li>
+                        </template>
+                    </ul>
+                    </template>
+                </div>
+                <div class="btn">
+                    <button id='cancel' @click='hideSelect'>清空筛选</button>
+                    <button id='submit' @click='submit'>确定</button>
+                </div>
+            </div>
+        </div>
+        <div id="popup">
+            <template v-for="item in popupData">
+            <div class="container">
+                <a id="popup_close" href='javascript:void(0);' @click='hidePopup'>
+                    <img src="./popup_image/close.png">
+                </a>
+                <ul class="popup_title">
+                    <li>类似案例</li>
+                    <li class='center'>当前情况</li>
+                    <li></li>
+                </ul>
+                <div class="content">
+                    <div class='table'>
+                        <template v-for="items in item.table">
+                            <ul>
+                                <li>{{items.title}}</li>
+                                <li v-for="item in items.list">{{item}}</li>
+                            </ul>
+                        </template>
+        </div>
+        <div class="similar">
+            <div class="s_top">
+                <p>{{item.similar.top}}</p>
+            </div>
+            <div class="s_mid">
+                <p>{{item.similar.mid}}</p>
+            </div>
+            <div class="s_bot">
+                <p>{{item.similar.bot}}</p>
+            </div>
+        </div>
+        <div class="current">
+            <div class="c_top">
+                <p>{{item.current.top}}</p>
+            </div>
+            <div class="c_mid">
+                <p>警报：当前雨量过大，车辆密度过高，容易产生交通事故，请调度人员处理，处理方案可参看右侧建议</p>
+            </div>
+            <div class="c_bot">
+                <p>{{item.current.bot}}</p>
+            </div>
+        </div>
+        <div class="blank">
+            <div class="b_top">
+                <p>{{item.blank.top}}</p>
+                <div class="btn">
+                    <a href="javascript:void(0);">
+                        <img src="./popup_image/icon-modify.png">
+                    </a>
+                    <a href="javascript:void(0);">
+                        <img src="./popup_image/icon-determine.png">
+                    </a>
+                </div>
+            </div>
+            <div class="b_bot">
+                <div class="b_bot_left">
+                    <p>{{item.blank.bLeft}}</p>
+                </div>
+                <div class="b_bot_right">
+                    <p>{{item.blank.bRight}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    </template>
+    </div>
+    </div>
+    <div id="viewDiv"></div>
+</body>
+<script>
+    (function(w) {
+        var docEl = w.document.documentElement;
+        var width = docEl.getBoundingClientRect().width;
+        docEl.style.fontSize = (width / 1920) * 20 + 'px';
+    })(window);
+</script>
+
+</html>
