@@ -16,14 +16,14 @@
 </style>
 
 <body>
-    <!--<div id="mask"></div>-->
+    <div id="mask"></div>
     <!--<button id="log">打印点</button>-->
     <!--<button id="del">删除</button>-->
     <!--<button id="delAll">全部删除</button>-->
     <!--<button id="clear_map" class='view_btn'>clear</button>-->
     <!--<button id="btn_select_close" class='view_btn'>close</button>-->
     <div id="popup_container">
-        <button id="btn_select_open" class='view_btn' @click='showSelect'>open</button>
+        <button id="btn_select_open" class=' view_btn ' @click='showSelect '>open</button>
         <div id="select">
             <div class="container">
                 <h5 class="select_title">地图资源导航</h5>
@@ -33,10 +33,10 @@
                 <div id='select_option'>
                     <template v-for="(items,index) in options">
                     <ul>
-                        <template v-for='(item,index) in items.option'>
+                        <template v-for='(item,index) in items.option '>
                             <li>
-                                <a href="javascript:void(0);" class='on'>
-                                    <i :style='{backgroundImage:item.style}' v-if='item.type'>{{item.type}}</i>{{item.name}}
+                                <a href="javascript:void(0);" class='on '>
+                                    <i :style='{backgroundImage:item.style} ' v-if='item.type '>{{item.type}}</i>{{item.name}}
                                 </a>
                             </li>
                         </template>
@@ -44,24 +44,24 @@
                     </template>
                 </div>
                 <div class="btn">
-                    <button id='cancel' @click='hideSelect'>清空筛选</button>
-                    <button id='submit' @click='submit'>确定</button>
+                    <button id='cancel ' @click='hideSelect '>清空筛选</button>
+                    <button id='submit ' @click='submit '>确定</button>
                 </div>
             </div>
         </div>
-        <div id="popup">
+        <div id="popup" style='display:none;'>
             <template v-for="item in popupData">
             <div class="container">
-                <a id="popup_close" href='javascript:void(0);' @click='hidePopup'>
+                <a id="popup_close" href='javascript:void(0); ' @click='hidePopup '>
                     <img src="./popup_image/close.png">
                 </a>
                 <ul class="popup_title">
                     <li>类似案例</li>
-                    <li class='center'>当前情况</li>
+                    <li class='center '>当前情况</li>
                     <li></li>
                 </ul>
                 <div class="content">
-                    <div class='table'>
+                    <div class='table '>
                         <template v-for="items in item.table">
                             <ul>
                                 <li>{{items.title}}</li>
@@ -123,7 +123,7 @@
     (function(w) {
         var docEl = w.document.documentElement;
         var width = docEl.getBoundingClientRect().width;
-        docEl.style.fontSize = (width / 1920) * 20 + 'px';
+        docEl.style.fontSize = (width / 1920) * 20 + 'px ';
     })(window);
 </script>
 

@@ -56,8 +56,8 @@ require([
     var view = new SceneView({
         container: "viewDiv",
         map: map,
-        center: [114.165927, 22.697654],
-        zoom: 12,
+        // center: [114.165927, 22.697654],
+        // zoom: 12,
         // constraints: {
         //     minZoom: 13,
         //     maxZoom: 13,
@@ -74,14 +74,14 @@ require([
     function viewInit() {
         view.then(function() {
                 return view.goTo({
-                    // tilt: 60,
-                    // center: [114.165927, 22.667654],
-                    // zoom: 13,
+                    tilt: 60,
+                    center: [114.165927, 22.667654],
+                    zoom: 13,
                 });
             })
-            // .then(pathInit)
-            // .then(buildingInit)
-            // .then(dataInit)
+            .then(pathInit)
+            .then(buildingInit)
+            .then(dataInit)
             .then(viewPointsInit);
     }
 
@@ -214,7 +214,7 @@ require([
 
     function dataInit() {
         // 解除click限制
-        // document.body.removeChild(mask);
+        document.body.removeChild(mask);
 
         // 初始化接口
         var socket = new WebSocket('ws://qhdata.tk/DV_LG/wscHandler/SzBaiduNavCar');
